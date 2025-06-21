@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 500px;
+        }
+
+        td, th{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead{
+            background-color: pink;
+            color: white;
+        }
+
+        tbody{
+            background-color: blanchedalmond;
+            color: black;
+        }
+
+        tfoot{
+            background-color: pink;
+            color: white;
+        }
+
+        .num{
+            text-align: right;
+        }
+
+        caption{
+            font-weight: bolder;
+            font-size: x-large;
+        }
+
+        tbody > tr:nth-child(odd){
+            background-color: brown;
+        }
+
+        tbody > tr:nth-child(even){
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h1>uso de tabelas grandes</h1>
+    <table>
+        <caption>populaçao do brasil</caption>
+        <thead>
+            <tr>
+                <th scope="col">estado</th>
+                <th scope="col" style="width: 100px;">populaçao</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>sao paulo</td>
+                <td class="num">45 919 849</td>
+            </tr>
+
+            <tr>
+                <td>minas gerais</td>
+                <td class="num">21 000 000</td>
+            </tr>
+
+            <tr>
+                <td>rio de janeiro</td>
+                <td class="num">15 000 000</td>
+            </tr>
+
+            <tr>
+                <td>santa catarina</td>
+                <td class="num">15 000 000</td>
+            </tr>
+
+            <tr>
+                <td>rio grande do sul</td>
+                <td class="num">12 000 000</td>
+            </tr>
+
+            <tr>
+                <td>manaus</td>
+                <td class="num">11 000 000</td>
+            </tr>
+
+            <tr>
+                <td>paraiba</td>
+                <td class="num">10 000 000</td>
+            </tr>
+
+            <tr>
+                <td>acre</td>
+                <td class="num">9 000 000</td>
+            </tr>
+
+            <tr>
+                <td>mato grosso do sul</td>
+                <td class="num">9 000 004</td>
+            </tr>
+
+            <tr>
+                <td>mato grosso</td>
+                <td class="num">8 987 765</td>
+            </tr>
+
+
+        </tbody>
+        <tfoot>
+            <th scope="row">total de habitantes</th>
+            <td class="num">0000</td>
+        </tfoot>
+    </table>
+</body>
+</html>
