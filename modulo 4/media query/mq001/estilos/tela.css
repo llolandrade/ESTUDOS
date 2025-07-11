@@ -1,0 +1,37 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: aquamarine;
+}
+
+header > h1{
+    text-align: center;
+}
+
+menu li {
+    display: inline-block;
+    background-color: rgb(18, 126, 126);
+    color: white;
+}
+
+menu ul {
+    list-style-type: none;
+    background-color: aqua;
+    padding: 10px;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+article{
+    display: block;
+    margin: auto;
+    width: 600px;
+}
