@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
+
+
+:root{
+    --cor1: #1B0506;
+    --cor2: #380A0C;
+    --cor3: #550F13;
+    --cor4: #731519;
+    --cor5: #8F1A20;
+    --cor6: #C7242C;
+    --cor7: #C9242D;
+
+    --font1: Festive;
+}
+
+body{
+    background: var(--cor1);
+    color: white;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header{
+    display: flex;
+    width: 90vw;
+    position: fixed;
+    top: 0;
+    padding: 20px 50px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.logo{
+    font-family: var(--font1);
+    font-size: 2em;
+    font-weight: 900;
+    text-shadow: 0 0 5px #94666683;
+    color: white;
+}
+
+header nav{
+    display: flex;
+    gap: 48px;
+}
+
+header nav a{
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+
+}
+
+header nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.2s ease;
+}
+
+header nav a:hover::after{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: var(--cor1);
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-image: linear-gradient(var(--cor6)0%, var(--cor7) 70%);
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    filter: blur(50px);
+    z-index: 1;
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse{
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    100%{
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1.8);
+    }
+}
