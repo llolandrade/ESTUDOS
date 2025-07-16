@@ -1,26 +1,35 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Permanent+Marker&family=Rock+Salt&family=Rubik+Puddles&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&family=Rubik+Puddles&display=swap');
 
 :root{
-    --cor1: #1B0506;
-    --cor2: #380A0C;
-    --cor3: #550F13;
-    --cor4: #731519;
-    --cor5: #8F1A20;
-    --cor6: #C7242C;
-    --cor7: #C9242D;
+    --cor1: #130678;
+    --cor2: #50B4F2;
+    --cor3: #28E473;
+    --cor4: #1EB776;
+    --cor5: #DEC624;
 
-    --font1: Festive;
+    --font1: Poças de Rubik;
+    --font2: Gaegu;
+    --font3: Marcador Permanente;
+    --font4: Sal-gema;
+    --font5: Rubik Glitch Pop;
 }
 
+
 body{
-    background: var(--cor1);
+    background: var(--cor2);
     color: white;
     font-size: 16px;
     overflow: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
 }
 
 header{
@@ -35,11 +44,11 @@ header{
 }
 
 .logo{
-    font-family: var(--font1);
-    font-size: 2em;
+    font-family: var(--font5);
+    font-size: 3em;
     font-weight: 900;
-    text-shadow: 0 0 5px #94666683;
-    color: white;
+    text-shadow: 0 0 5px;
+    color: var(--cor5);
 }
 
 header nav{
@@ -61,7 +70,7 @@ header nav a::after{
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: white;
+    background-color: var(--cor5);
     transition: width 0.2s ease;
 }
 
@@ -78,7 +87,7 @@ a{
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: var(--cor1);
+    background: var(--cor2);
 }
 
 .container::before{
@@ -86,7 +95,7 @@ a{
     position: absolute;
     width: 200px;
     height: 100px;
-    background-image: linear-gradient(var(--cor6)0%, var(--cor7) 70%);
+    background-image: linear-gradient(white, rgba(255, 255, 255, 0.322));
     border-radius: 50%;
 
     top: 50%;
@@ -109,3 +118,72 @@ a{
         transform: translate(-50%, -50%) scale(1.8);
     }
 }
+
+.circulos{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circulo{
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.027);
+}
+
+.circulo:nth-child(1){
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 10%;
+}
+
+.circulo:nth-child(2){
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 10%;
+}
+
+.circulo:nth-child(3){
+    width: 300px;
+    height: 300px;
+    top: 70%;
+    left: 60%;
+}
+
+.circulo:nth-child(4){
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    left: 90%;
+}
+
+.circulo:nth-child(5){
+    width: 300px;
+    height: 300px;
+    top: 3%;
+    left: 90%;
+}
+
+.circulo:nth-child(6){
+    width: 75px;
+    height: 75px;
+    top: 0%;
+    left: 50%;
+}
+
+img{
+    width: 45vw;
+    height: 40vh;
+}
+
+.img{
+    position: relative;
+    top: 5%;
+    left: 60%;
+}
+
