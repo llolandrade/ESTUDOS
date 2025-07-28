@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        input{
+            padding: 10px;
+            font-size: 40px;
+            margin: auto;
+            width: 400px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body onload="alert('terminou de carregar')">
+    <h1>aprendendo sobre eventos js</h1>
+    <button onclick="EventoClick()">clique aqui</button>
+    <button ondblclick="eventodbl()"> clique duas vezes</button>
+    <div id="teste" onmouseover="mouseDentro()" onmouseout="mouseFora()" onmousemove="adicionaTexto()">
+        <p id="teste2">
+
+        </p>
+    </div>
+
+    <input id="campoTexto" onkeydown="teclapressionada()"  type="text" placeholder="escreva seu nome" >
+
+    <select onchange="mudou()" name="" id="">
+        <option value="1">valor 1</option>
+        <option value="2">valor 2</option>
+        <option value="3">valor 3</option>
+        <option value="4">valor 4</option>
+    </select>
+
+</body>
+<script>
+function EventoClick(){
+    window.alert('acionou um evento click')
+    document.body.style.backgroundColor = 'yellow'
+}
+
+function eventodbl(){
+    window.alert('voce clicou duas vezes')
+    document.body.style.backgroundColor = 'pink'
+}
+
+function mouseDentro(){
+    
+    let div = document.getElementById('teste');
+    div.style.backgroundColor = 'red';
+}
+
+function mouseFora(){
+    
+    let div = document.getElementById('teste');
+    div.style.backgroundColor = 'pink';
+}
+
+function mudou(){
+console.log('mudou')
+}
+
+function teclapressionada(){
+    let input = document.getElementById('campoTexto').value;
+    console.log(input)
+}
+
+
+</script>
+</html>
